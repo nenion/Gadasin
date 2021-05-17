@@ -80,6 +80,8 @@ class Window(QtWidgets.QMainWindow):
 
 
         self.ui = uic.loadUi('mainwindow.ui', self)
+
+        # тут должен быть файл-таблица с аномальными данными!
         data = open('text.txt')
         self.adataview.addItems(data)
 
@@ -122,8 +124,11 @@ class Window(QtWidgets.QMainWindow):
     def StartDiagnistic(self):
 
         # если соединение с сервером установлено, то
-        # запрос на установление периода отобажения данных
-        # обновить данные в виджете aDataView (таблица с аномальными данными)
+        # тут должен быть файл с информации о диагностике!
+        self.adataview.clear()
+        data = open('Diagnostic.txt',encoding='utf-8')
+        self.adataview.addItems(data)
+
         QtWidgets.QMessageBox.information(self, 'Статус', 'Новый данные получены!')
         # else:
         #      QtWidgets.QMessageBox.warning(self, 'Ошибка', 'Соединение с сервером не установлено!')
