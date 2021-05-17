@@ -30,10 +30,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">border-color rgb(183, 227, 195)</string>
-  </property>
-  <property name="tabShape">
-   <enum>QTabWidget::Triangular</enum>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
@@ -110,7 +107,7 @@
       <enum>Qt::LeftToRight</enum>
      </property>
      <property name="autoFillBackground">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="text">
       <string>Логин</string>
