@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>876</width>
     <height>600</height>
    </rect>
   </property>
@@ -17,12 +17,16 @@
    <iconset>
     <normaloff>D:/Download/temperature_13519.png</normaloff>D:/Download/temperature_13519.png</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(69, 69, 69);
+color: rgb(250, 255, 255);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>110</y>
+      <x>230</x>
+      <y>140</y>
       <width>401</width>
       <height>261</height>
      </rect>
@@ -34,8 +38,18 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(56, 56, 56);
+color: rgb(255, 255, 255);</string>
+    </property>
     <property name="title">
      <string>Регистрация</string>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
     </property>
     <widget class="QPushButton" name="newregistration">
      <property name="geometry">
@@ -58,6 +72,10 @@
      </property>
      <property name="autoFillBackground">
       <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(222, 142, 55);
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Зарегистрироваться</string>
@@ -98,10 +116,17 @@
       <enum>Qt::LeftToRight</enum>
      </property>
      <property name="autoFillBackground">
-      <bool>true</bool>
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(48, 48, 48);
+color: rgb(247, 247, 247);</string>
      </property>
      <property name="text">
       <string>Электронная почта</string>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
      </property>
      <property name="dragEnabled">
       <bool>true</bool>
@@ -135,8 +160,15 @@
        <bold>true</bold>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(48, 48, 48);
+color: rgb(247, 247, 247);</string>
+     </property>
      <property name="text">
       <string>Пароль</string>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
      </property>
      <property name="clearButtonEnabled">
       <bool>true</bool>
@@ -177,10 +209,17 @@
       <enum>Qt::LeftToRight</enum>
      </property>
      <property name="autoFillBackground">
-      <bool>true</bool>
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(48, 48, 48);
+color: rgb(247, 247, 247);</string>
      </property>
      <property name="text">
       <string>Логин</string>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
      </property>
      <property name="dragEnabled">
       <bool>true</bool>
@@ -211,6 +250,10 @@
        <bold>true</bold>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(222, 142, 55);
+color: rgb(255, 255, 255);</string>
+     </property>
      <property name="text">
       <string>Войти</string>
      </property>
@@ -222,7 +265,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>876</width>
      <height>21</height>
     </rect>
    </property>
