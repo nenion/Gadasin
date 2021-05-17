@@ -21,7 +21,7 @@
    <double>1.000000000000000</double>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QListView" name="aDataView">
+   <widget class="QListWidget" name="adataview">
     <property name="geometry">
      <rect>
       <x>460</x>
@@ -253,7 +253,7 @@
     </property>
    </widget>
    <zorder>groupBox</zorder>
-   <zorder>aDataView</zorder>
+   <zorder>adataview</zorder>
    <zorder>diagnostic</zorder>
    <zorder>startperiod</zorder>
    <zorder>setsensorperiod</zorder>

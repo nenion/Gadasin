@@ -80,8 +80,8 @@ class Window(QtWidgets.QMainWindow):
 
 
         self.ui = uic.loadUi('mainwindow.ui', self)
-
-
+        data = open('text.txt')
+        self.adataview.addItems(data)
 
 
         grid = QtWidgets.QGridLayout()
