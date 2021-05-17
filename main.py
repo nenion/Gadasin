@@ -81,21 +81,21 @@ class Window(QtWidgets.QMainWindow):
 
         self.ui = uic.loadUi('mainwindow.ui', self)
 
-        # тут должен быть файл-таблица с аномальными данными!
-        data = open('text.txt')
-        self.adataview.addItems(data)
-
-
         grid = QtWidgets.QGridLayout()
         grid.addWidget(self.GraphWidget, 0, 0)
 
 
         self.ui.setsensorperiod.clicked.connect(self.SetSensorPeriod)
         self.ui.diagnostic.clicked.connect(self.StartDiagnistic)
+        self.ui.setsampling.clicked.connect(self.Sampling)
 
         # если соединение с сервером установлено, то
         # DATA получить данные с сервера о температуре установленного периода
+        # тут должен быть файл-таблица с аномальными данными!
+        data = open('text.txt')
+        self.adataview.addItems(data)
 
+        #надо написать алгоритм считывания с файла (часы,температура) для plot
         self.plot([1,2,3,4,5,6,7,8,9,10], [30,32,34,32,33,31,29,32,35,45])
 
         # else:
@@ -103,30 +103,55 @@ class Window(QtWidgets.QMainWindow):
 
     def SetSensorPeriod(self):
 
-        start = self.startperiod.text()
-        end = self.endperiod.text()
-
-
         # если соединение с сервером установлено, то
-        # запрос на установление периода отобажения данных
-        # обновить данные в виджетах GraphWidget (график) и aDataView (таблица с аномальными данными)
-        self.ui.setsensorperiod.clicked.connect()
-        QtWidgets.QMessageBox.information(self, 'Статус','Новый период установлен!')
+
+        data = open('text.txt')
+
+        start = self.startperiod.text
+        end = self.endperiod.text
+
+        if self.ui.setsensorperiod.clicked.connect:
+
+            # надо написать алгоритм считывания с файла определенного периода с start до end
+
+            self.adataview.clear()
+            self.adataview.addItems(data)
+
+            # надо написать алгоритм считывания с файла (часы,температура) для plot
+            self.plot([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [30, 32, 34, 32, 33, 31, 29, 32, 35, 45])
+
+            QtWidgets.QMessageBox.information(self, 'Статус','Новый период установлен!')
+
+
         # else:
         #      QtWidgets.QMessageBox.warning(self, 'Ошибка', 'Соединение с сервером не установлено!')
 
     def Sampling(self):
 
         sampling = self.sampling.text()
-        self.ui.setsampling.clicked.connect()
+        data = open('text.txt')
+
+        # надо написать алгоритм считывания с файла заданной дискретизацией
+
+
+        if self.ui.setsampling.clicked.connect:
+
+
+            self.adataview.clear()
+            self.adataview.addItems(data)
+
+            QtWidgets.QMessageBox.information(self, 'Статус', 'Новый интервал считывания установлен!')
 
 
     def StartDiagnistic(self):
 
+        self.adataview.clear()
         # если соединение с сервером установлено, то
         # тут должен быть файл с информации о диагностике!
-        self.adataview.clear()
+
         data = open('Diagnostic.txt',encoding='utf-8')
+
+        self.adataview.clear()
         self.adataview.addItems(data)
 
         QtWidgets.QMessageBox.information(self, 'Статус', 'Новый данные получены!')
